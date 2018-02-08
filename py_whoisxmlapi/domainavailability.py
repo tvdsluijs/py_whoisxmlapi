@@ -48,7 +48,7 @@ class domainAvailability:
             logging.warning(str(e) + " | " + str(exc_type) + " | " + str(fname) + " | " + str(exc_tb.tb_lineno)) 
             return False
 
-    def get_json_from_url(self, url=None):
+    def get_json(self, url=None):
         try:
             if url is None:
                 raise Exception("No Url!")
@@ -67,14 +67,12 @@ class domainAvailability:
             logging.warning(str(e) + " | " + str(exc_type) + " | " + str(fname) + " | " + str(exc_tb.tb_lineno)) 
     
     
-    def checkDomain(self, domain):
+    def getData(self, domain):
         try:
-            usr = self.usr
-            pwd = self.pwd
             
-            url = self.url.format(domain, usr, pwd)
+            url = self.url.format(domain, self.usr, self.pwd)
             
-            data = self.get_json_from_url(url)
+            data = self.get_json(url)
             
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
