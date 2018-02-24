@@ -12,12 +12,32 @@ The maximum number of requests per second is 30. In case that the limit is breac
     * pip3 py_whoisxmlapi --upgrade (or pip py_whoisxmlapi --upgrade )
 * ready to use it!
 
-'''
+## How do I use it
+
+```
+from py_whoisxmlapi import domainAvailability
+
+usr = "user name"
+pwd = "your Password"
+
+domain = "google.com"
+
+d = domainAvailability(usr, pwd)
+
+data = d.getData(domain)
+
+```
+**Output :**
+```
 {"DomainInfo": {
   "domainAvailability": "UNAVAILABLE",
-  "domainName": "vandersluijs.nl"
+  "domainName": "google.com"
 }}
-'''
+```
+
+Thats all!!
+
+
 
 ## Who do I talk to?
 

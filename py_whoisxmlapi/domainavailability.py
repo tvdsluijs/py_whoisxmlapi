@@ -35,7 +35,7 @@ class domainAvailability:
             if url is None:
                 raise Exception("No Url!")
             
-            r = requests.get(url, timeout=1)
+            r = requests.get(url, timeout=10, verify=False)
             if r.status_code == 200:
                 content = r.content.decode("utf8")
                 return content

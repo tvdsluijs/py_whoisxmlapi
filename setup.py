@@ -5,7 +5,7 @@ def readme():
         return f.read()
 
 setup(name='py_whoisxmlapi',
-      version='0.1.3',
+      version='0.1.4',
       description='Python3 WhoisService data parser',
       long_description=readme(),
       url='https://bitbucket.org/tvdsluijs/py_whoisxmlapi',
